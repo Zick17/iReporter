@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+        <p>For your Geolocation.</p>
+
+        <button onclick="getLocation()">Click here</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+        var x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+            
+        function showPosition(position) {
+            x.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+      
+    <h1>Intervention Form        iReporter</h1>
+    <form>
+      <fieldset>
+           
+                                
+            
+        <legend>Create Intervention Record</legend>
+        <div class="form">
+            <form class="register_form">
+                <input type="password" name="password" placeholder="User Password"/>
+
+              
+
+               
+                <textarea rows="10" cols="30"></textarea>
+                <button>Submit Record</button>
+                <a href="intervention.html">Click here to go to redflag page</a>
+
+                           
+       
+     
+       
+       
+      </fieldset>
+    </form>
+  </body>
+</html>
